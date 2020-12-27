@@ -1,13 +1,333 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/*#FF5000 naranja,
+ también usa blanco y negro*/
+
+ *{
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     text-decoration: none;
+     font-family: 'Poppins', sans-serif;
+ }
+ body::-webkit-scrollbar{
+    width: 10px;
+    background-color: rgb(207, 207, 207);
+ }
+ body::-webkit-scrollbar-thumb{
+     background-color: #FF5000;
+     border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+ }
+ /*-------------------menu-------------------------*/
+ .Menu{
+     position: fixed;
+     top: 0;
+     width: 100%;
+     height: 10vh;
+     border-bottom: 1px solid #FF5000;
+     background-color: #ffffff;
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+     z-index: 10;
+ }
+ .Menu__inicio{
+     width: 20%;
+ }
+ .Menu__link{
+     font-size: 1.2rem;
+     font-weight: 400;
+ }
+ .Menu__inputIcono{
+     width: 60%;
+     height: 80%;
+ }
+ .Menu__input{
+     width: 100%;
+     height: 100%;
+     text-align: center;
+     font-size: 1rem;
+     font-weight: 300;
+
+     border-radius: 30px;
+     -webkit-border-radius: 30px;
+     -moz-border-radius: 30px;
+     -ms-border-radius: 30px;
+     -o-border-radius: 30px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/*---------------inicio---------------------*/
+.Inicio{
+    width: 100%;
+    min-height: 100vh;
+}
+.Inicio__container{
+    margin: auto;
+    margin-top: 15vh;
+    width: 80%;
+}
+.Inicio__Slider{
+    width: 100%;
+    min-height: 50vh;
+}
+.Inicio__Main{
+    width: 100%;
+    margin-top: 15vh;
+}
+
+/*----------------slider------------------*/
+.Slider{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.Slider__h2container{
+    height: 10vh ;
+    display: flex;
+    align-items: center;
+}
+.Slider__H2{
+    font-size: 1.2rem;
+}
+.Slider__slider{
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+}
+.Slider__article{
+    min-height: 40vh;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+.Slider__imgContainer{
+    margin: auto !important;
+    width: 98%;
+    height: 95%;
+    border-radius: 11px;
+    -webkit-border-radius: 11px;
+    -moz-border-radius: 11px;
+    -ms-border-radius: 11px;
+    -o-border-radius: 11px;
+}
+.Slider__img{
+    width: 100%;
+    height: 95%;
+    border-radius: 11px;
+    -webkit-border-radius: 11px;
+    -moz-border-radius: 11px;
+    -ms-border-radius: 11px;
+    -o-border-radius: 11px;
+}
+.Slider__h3{
+    padding: 5px;
+    cursor: pointer;
+}
+/*---------------main----------------*/
+.Main{
+    width: 100%;
+    min-height: 100vh;
+    margin-bottom: 15vh;
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.Main__article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 3px 3px 6px rgba(150, 150, 150, 0.8);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.Main__article:hover{
+    box-shadow: 7px 7px 10px rgba(150, 150, 150, 0.8);
+    
+}
+.Main__divImg{
+    width: 100%;
+    height: 100%;
+    background: rgb(255,80,0);
+    background: linear-gradient(0deg, rgba(255,80,0,0) 0%, rgba(255,80,0,1) 100%);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.Main__Img{
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.Main__divLink{
+    width: 100%;
+    border-bottom: #a8a8a8 solid 1px;
+    text-align: center;
+}
+.Main__link{
+    padding: 10px;
+    font-size: 1rem;
+    color: #000000;
+    font-weight: bold;
+}
+
+.Main__divStats{
+    width: 100%;
+    min-height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.Main__span{
+    color: #000000;
+}
+
+/*---------------------Pokemon-----------------------*/
+.Pokemon{
+    width: 70%;
+    min-height: 85vh;
+    margin: auto;
+    margin-top: 12vh;
+}
+
+.Pokemon__article{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 33.3%);
+    grid-template-rows: 10vh repeat(2, 35vh);
+    grid-template-areas: "Pokemon__divH2     Pokemon__divH2      Pokemon__divH2"
+                         "Pokemon__figure    Pokemon__Stats      Pokemon__Types"
+                         "Pokemon__figure    Pokemon__games      Pokemon__games";
+}
+.Pokemon__divH2{
+    grid-area: Pokemon__divH2;
+
+    color: #ffffff;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Pokemon__figure{
+    grid-area: Pokemon__figure;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Pokemon__Stats{
+    grid-area: Pokemon__Stats;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Pokemon__Types{
+    grid-area: Pokemon__Types;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Pokemon__games{
+    grid-area: Pokemon__games;
+
+    display: flex;
+    flex-direction: column;
+}
+.Pokemon__divH3{
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.Pokemon__divGames{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.Pokemon__nombresGames{
+    width: 25%;
+    text-align: center;
+}
+.Pokemon__p{
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: .9rem;
+}
+.Pokemon__H3, .Pokemon__span{
+    color: #ffffff;
+}
+.Pokemon__H3{
+    margin-bottom: 1rem;
+}
+.Pokemon__Img{
+    min-width: 150px;
+    min-height: 190px;
+}
+/*.Pokemon__divStats{
+    min-width: 150px;
+    min-height: 190px;
+}*/
+
+.Pokemon__games,
+.Pokemon__divH2,
+.Pokemon__figure,
+.Pokemon__Stats,
+.Pokemon__Types{
+    background-color: #FF5000;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+/*----------------media----------------------*/
+@media (max-width: 700px){
+    /*grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));*/
+    /*.Pokemon__article{
+        grid-gap: 1rem;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-template-areas: "Pokemon__divH2     Pokemon__divH2      Pokemon__divH2"
+                             "Pokemon__figure    Pokemon__Stats      Pokemon__Types"
+                             "Pokemon__figure    Pokemon__games      Pokemon__games";
+    }*/
+    .Pokemon__article{
+        grid-gap: 1rem;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-template-areas: "Pokemon__divH2"
+                             "Pokemon__figure"
+                             "Pokemon__Stats"
+                             "Pokemon__Types"
+                             "Pokemon__games";
+    }
+}
+@media (min-width: 700px) and (max-width: 1280px){
+    .Pokemon__article{
+        grid-template-columns: repeat(3, 33.3%);
+        grid-template-rows: 10vh repeat(2, 50vh);
+        grid-template-areas: "Pokemon__divH2     Pokemon__divH2      Pokemon__divH2"
+                             "Pokemon__figure    Pokemon__Stats      Pokemon__Types"
+                             "Pokemon__figure    Pokemon__games      Pokemon__games";
+    }
+}
+@media (max-width: 500px){
+    .Pokemon__games{
+        display: none;
+    }
 }
