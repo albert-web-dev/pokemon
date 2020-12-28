@@ -49,10 +49,6 @@ const Main = () =>{
         })
     }
 
-    /*pokemonInfo.map((pokemon, i) =>{
-        console.log(pokemon.stats[0].base_stat)
-        console.log(pokemon.types[0].type.name)
-    })*/
     return(
         <div className="Main">
             {
